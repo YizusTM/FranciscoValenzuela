@@ -1,43 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mis Redes Sociales</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Francisco Valenzuela | Mis Redes</title>
+  
+  <!-- Fuente y Iconos -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       text-align: center;
-      padding: 40px;
-      background-color: #f4f4f4;
+      max-width: 400px;
+      width: 90%;
     }
+
     h1 {
+      font-size: 24px;
       color: #333;
+      margin-bottom: 20px;
     }
+
+    .redes {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
     .redes a {
-      display: block;
-      margin: 10px;
-      padding: 10px;
-      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 8px;
       color: white;
-      background-color: #0077b5;
-      border-radius: 5px;
-      width: 200px;
-      margin-left: auto;
-      margin-right: auto;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.2s ease;
     }
-    .github { background-color: #333; }
+
+    .redes a:hover {
+      transform: scale(1.05);
+    }
+
     .twitter { background-color: #1da1f2; }
     .linkedin { background-color: #0077b5; }
     .instagram { background-color: #e1306c; }
+
+    .redes i {
+      margin-right: 10px;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #888;
+    }
   </style>
 </head>
 <body>
-  <h1>¡Hola! Estas son mis redes</h1>
-  <div class="redes">
-    <a href="https://x.com/FranciscoVlza8" class="twitter">Twitter</a>
-    <a href="https://www.linkedin.com/in/francisco-valenzuela-0bb141315/" class="linkedin">LinkedIn</a>
-    <a href="https://www.instagram.com/jesusfrancisco.1/" class="instagram">Instagram</a>
+  <div class="card">
+    <h1>¡Hola! Soy Francisco Valenzuela</h1>
+    <p>Conecta conmigo en mis redes sociales:</p>
+
+    <div class="redes">
+      <a href="https://x.com/FranciscoVlza8" class="twitter" target="_blank">
+        <i class="fab fa-x-twitter"></i> Twitter
+      </a>
+      <a href="https://www.linkedin.com/in/francisco-valenzuela-0bb141315/" class="linkedin" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://www.instagram.com/jesusfrancisco.1/" class="instagram" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+    </div>
   </div>
+
+  <footer>
+    &copy; 2025 Francisco Valenzuela
+  </footer>
 </body>
 </html>
