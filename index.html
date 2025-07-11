@@ -18,42 +18,59 @@
       margin: 0;
       padding: 0;
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to bottom right, #f0f2f5, #dfe6e9);
+      background: url('https://i.imgur.com/vOUoMyF.jpeg') no-repeat center center fixed;
+      background-size: cover;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
+      position: relative;
+    }
+
+    /* Capa de oscurecimiento */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
     }
 
     .card {
-      background-color: #ffffff;
+      position: relative;
+      z-index: 1;
+      backdrop-filter: blur(12px);
+      background-color: rgba(255, 255, 255, 0.15);
       border-radius: 16px;
       padding: 30px 25px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      box-shadow: 0 10px 35px rgba(0,0,0,0.25);
       max-width: 400px;
       width: 90%;
       text-align: center;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     .avatar {
-      width: 100px;
-      height: 100px;
+      width: 110px;
+      height: 110px;
       margin: 0 auto 20px;
       border-radius: 50%;
-      background-image: url('https://avatars.githubusercontent.com/u/your-github-id'); /* Reemplaza por tu avatar real */
+      background-image: url('https://imgur.com/a/LdUHx2C'); /* <-- Aquí tu avatar real */
       background-size: cover;
       background-position: center;
+      box-shadow: 0 0 0 4px rgba(255,255,255,0.4);
     }
 
     h1 {
-      font-size: 22px;
-      margin-bottom: 10px;
-      color: #333;
+      font-size: 24px;
+      margin-bottom: 8px;
     }
 
     p {
-      color: #666;
+      color: #e0e0e0;
       margin-bottom: 25px;
+      font-weight: 300;
     }
 
     .redes {
@@ -72,11 +89,12 @@
       border-radius: 8px;
       font-weight: bold;
       color: white;
-      transition: transform 0.2s ease;
+      transition: transform 0.25s ease;
     }
 
     .redes a:hover {
       transform: scale(1.05);
+      opacity: 0.9;
     }
 
     .twitter { background-color: #1da1f2; }
@@ -84,9 +102,9 @@
     .instagram { background-color: #e1306c; }
 
     footer {
-      margin-top: 20px;
+      margin-top: 25px;
       font-size: 12px;
-      color: #999;
+      color: #ccc;
     }
   </style>
 </head>
@@ -94,7 +112,7 @@
   <div class="card">
     <div class="avatar"></div>
     <h1>Francisco Valenzuela</h1>
-    <p>Programador | Tecnología </p>
+    <p>Programador | Tecnología</p>
 
     <div class="redes">
       <a href="https://x.com/FranciscoVlza8" class="twitter" target="_blank">
